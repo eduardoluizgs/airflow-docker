@@ -79,7 +79,7 @@ Dentro do `VSCode`, aperte `CTRL+SHIT+P > Dev Containers: Rebuild and Reopen in 
 
 A janela do `VSCode` será re-aberta com o projeto executando dentro do container de desenvolvimento. Aguarde até que o toda o processo de `build` de container seja concluído (você pode clicar na caixa informativa suspensa do lado inferior direito para acompanhar o processo).
 
-Em seguida, clique no painel esquerdo `Executar e Depurar` do `VSCode`, selecione a opção `Airflow Test Task - download_files_task` na caixa suspensa e clique no botão `Iniciar depuração (F5)`. Verifique se a tarefa é executada com sucesso no `console`.
+Em seguida, clique no painel esquerdo `Executar e Depurar` do `VSCode`, selecione a opção `Pytest - Tag: _DEV` na caixa suspensa e clique no botão `Iniciar depuração (F5)`. Verifique se a tarefa é executada com sucesso no `console`.
 
 ## Configução do ambiente local
 
