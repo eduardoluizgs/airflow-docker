@@ -143,6 +143,26 @@
             ],
             "console": "integratedTerminal",
             "justMyCode": false
-        }
+        },
+        {
+            "name": "Pytest - All",
+            "type": "python",
+            "request": "launch",
+            "program": "/home/airflow/.local/lib/python3.9/site-packages/pytest",
+            "cwd": "${workspaceFolder}/",
+            "args": ["--cache-clear"],
+            "console": "integratedTerminal",
+            "justMyCode": true,
+        },
+        {
+            "name": "Pytest - Tag: `_DEV`",
+            "type": "python",
+            "request": "launch",
+            "program": "/home/airflow/.local/lib/python3.9/site-packages/pytest",
+            "cwd": "${workspaceFolder}/",
+            "args": ["-k _DEV"],
+            "console": "integratedTerminal",
+            "justMyCode": true,
+        },
     ]
 }

@@ -31,6 +31,8 @@ requirements.txt                          |Arquivo contando bibliotecas necessá
 
 ## Requisitos
 
+* [Python 3.9](https://www.python.org/ftp/python/3.9.0/python-3.9.0-amd64.exe)
+* [Python pip](https://www.geeksforgeeks.org/how-to-install-pip-on-windows/)
 * [Docker](https://docs.docker.com/get-docker/)
 * [Visual Studio Code](https://code.visualstudio.com/download)
     * [Docker Extension for VSCode](https://github.com/microsoft/vscode-docker)

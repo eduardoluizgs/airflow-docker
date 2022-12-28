@@ -10,8 +10,6 @@ framework_dataflow.egg-info/
 .temp/*
 !.temp/.gitkeep
 .venv/
-dags/*
-!dags/.gitkeep
 .logs/*
 !.logs/.gitkeep
 .storage/*
