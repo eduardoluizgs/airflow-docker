@@ -33,6 +33,7 @@ start = DummyOperator(
 download_files_task = PythonOperator(
     task_id='download_files_task', 
     python_callable=DownloadFilesTask.call, 
+    op_args=('2022', '06', 'sample_etl'),
     dag=dag
 )
 
