@@ -6,19 +6,28 @@ Este projeto foi testado no `Mac OS Monterey 12.1` com Python `3.9`.
 
 ## Estrutura do Projeto
 
-**Item**            |**Descrição**
-|-----              |-----
-.vscode/            |Pasta com configurações para execução do projeto no `Visual Studio Code`.
-dags/               |Pasta contendo as dags/fluxos de processamento de dados do `Airflow`.
-dags/tasks          |Pasta contendo os scripts de `captura`, `extração`, `transformação` e `gravação`.
-dags/tools          |Arquivos de helpers e funções genéricas e uso geral.
-.storage/            |Pasta para armazenar de forma temporário os arquivos de dados.
-airflow-artigo.pdf  |Mini artigo sobre `Airflow`.
-airflow.cfg         |Arquivo de configuração do `Airflow` para execução em ambiente local.
-Dockerfile          |Arquivo de imagem `docker` para criação do container `SQL Server`. Necssário para injeção do utilitário de linha de comando para criação da estrutura inicial do banco de dados.
-docker-compose.yml  |Arquivo com configurações para criação de containers do `Airflow`, `Spark`e `SQL Server`.
-init-database.sql   |Script SQL para criação da estrutura inicial do banco de dados `SQL Server`.
-requirements.txt    |Arquivo contando bibliotecas necessárias para execução do projeto.
+**Item**                                  |**Descrição**
+|-----                                    |-----
+.logs/                                    |Pasta de logs do `Airflow`.
+.storage/                                 |Pasta para armazenar os arquivos de dados persistentes.
+.temp/                                    |Pasta de arquivos temporários.
+.vscode/                                  |Pasta com configurações para execução do projeto no `Visual Studio Code`.
+dags/                                     |Pasta contendo as dags/fluxos de processamento de dados do `Airflow`.
+dags/sample_etl/flow                      |Pasta contendo os scripts de montagem do `fluxo` do `Airflow`.
+dags/sample_etl/tasks                     |Pasta contendo os scripts de `captura`, `extração`, `transformação` e `gravação`.
+dags/sample_etl/testes                    |Pasta contendo os scripts de testes das tarefas.
+dags/sample_etl/tools                     |Pasta contendo os arquivos de helpers e funções genéricas de uso geral.
+plugins/                                  |Pasta de plugins e bibliotecas auxiliares.
+plugins/framework-dataflow                |Biblioteca de funções auxiliares para fluxo de dados.
+.devcontainer.json                        |Arquivo de configuração para o container de desenvolvimento.
+.env-sample                               |Arquivo de variáveis de ambiente de exemplo.
+airflow                                   |Arquivo de inicialização do `Airflow`, necessário para execução deste dentro do `DevContainer`.
+airflow-artigo.pdf                        |Mini artigo sobre `Airflow`.
+airflow.cfg                               |Arquivo de configuração do `Airflow` para execução em ambiente local.
+docker-compose-debug-vscode-dev-container |Arquivo para execução do container de desenvolvimento no Docker.
+docker-compose.yml                        |Arquivo para execução dos containers do `Airflow`.
+Dockerfile                                |Arquivo de imagem `docker` para criação do containers `Airflow`.
+requirements.txt                          |Arquivo contando bibliotecas necessárias para execução do projeto.
 
 ## Requisitos
 
