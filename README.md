@@ -36,7 +36,9 @@ requirements.txt                          |Arquivo contando bibliotecas necessá
 * [Docker](https://docs.docker.com/get-docker/)
 * [Visual Studio Code](https://code.visualstudio.com/download)
     * [Docker Extension for VSCode](https://github.com/microsoft/vscode-docker)
-      * _Pode ser instaldo via `VSCode` no painel de `Extensões`._
+        * _Pode ser instaldo via `VSCode` no painel de `Extensões`._
+    * [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+        * _Pode ser instaldo via `VSCode` no painel de `Extensões`._
 
 ## Configução do ambiente c/ Docker
 
@@ -52,6 +54,8 @@ python3 setup.py bdist_wheel
 Em seguida, crie a imagem do `Airflow`:
 
 ```shell
+cd ..
+cd ..
 docker build -t airflow:developer .
 ```
 
@@ -61,11 +65,17 @@ Em seguida, suba o `docker-compose` para iniciar os containers do `Airflow`:
 $ docker-compose up -d
 ```
 
-Acesse o endereço [http://localhost:8080](http://localhost:8080) no browser e verifique se a interface do `Airflow` é exibida e a `DAG - Sample ETC` é exibida.
+Acesse o endereço [http://localhost:8080](http://localhost:8080) no browser e verifique se a interface do `Airflow` é exibida.
+
+Entre com o usuário `airflow` e senha padrão `airflow`.
+
+Verifique se a `DAG - Sample ETC` é exibida.
 
 ### Executando a DAG c/ Docker
 
-Para executar e debugar o projeto com `Docker` é necessário abrir o projeto em modo `Dev Container`. Aperte `CTRL+SHIT+P > Dev Containers: Rebuild and Reopen in Container`. 
+Para executar e debugar o projeto com `Docker` é necessário abrir o projeto em modo `Dev Container`.
+
+Dentro do `VSCode`, aperte `CTRL+SHIT+P > Dev Containers: Rebuild and Reopen in Container`. 
 
 A janela do `VSCode` será re-aberta com o projeto executando dentro do container de desenvolvimento. Aguarde até que o toda o processo de `build` de container seja concluído (você pode clicar na caixa informativa suspensa do lado inferior direito para acompanhar o processo).
 
