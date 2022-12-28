@@ -1,0 +1,4 @@
+pytest==7.2.0
+
+# TODO : Precisa melhorar o método de instalação da biblioteca
+./framework_dataflow-0.0.0-py3-none-any.whl

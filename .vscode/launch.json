@@ -1,0 +1,148 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Airflow Init DB",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/airflow",
+            "python": "/usr/local/bin/python",
+            "cwd": "/home/airflow/.local/lib/python3.9/site-packages/airflow",
+            "console": "integratedTerminal",
+            "args": [
+                "db",
+                "init"
+            ]
+        },
+        {
+            "name": "Airflow Init Admin User",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/airflow",
+            "python": "/usr/local/bin/python",
+            "cwd": "/home/airflow/.local/lib/python3.9/site-packages/airflow",
+            "console": "integratedTerminal",
+            "args": [
+                "users",
+                "create",
+                "--username",
+                "airflow",
+                "--firstname",
+                "Airflow",
+                "--lastname",
+                "Admin",
+                "--role",
+                "Admin",
+                "--email",
+                "admin@airflow.org",
+            ]
+        },
+        {
+            "name": "Airflow Webserver",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/airflow",
+            "python": "/usr/local/bin/python",
+            "cwd": "/home/airflow/.local/lib/python3.9/site-packages/airflow",
+            "console": "integratedTerminal",
+            "args": [
+                "webserver"
+            ]
+        },
+        {
+            "name": "Airflow Scheduler",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/airflow",
+            "python": "/usr/local/bin/python",
+            "cwd": "/home/airflow/.local/lib/python3.9/site-packages/airflow",
+            "console": "integratedTerminal",
+            "args": [
+                "scheduler"
+            ]
+        },
+        {
+            "name": "Airflow Clean Dag",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/airflow",
+            "python": "/usr/local/bin/python",
+            "cwd": "/home/airflow/.local/lib/python3.9/site-packages/airflow",
+            "console": "integratedTerminal",
+            "args": [
+                "tasks",
+                "clear",
+                "sample_etl"
+            ]
+        },
+        {
+            "name": "Airflow Delete Dag",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/airflow",
+            "python": "/usr/local/bin/python",
+            "cwd": "/home/airflow/.local/lib/python3.9/site-packages/airflow",
+            "console": "integratedTerminal",
+            "args": [
+                "dags",
+                "delete",
+                "-y",
+                "sample_etl"
+            ]
+        },
+        {
+            "name": "Airflow Test Dag",
+            "type": "python",
+            "request": "launch",
+            "justMyCode": false,
+            "program": "${workspaceFolder}/airflow",
+            "python": "/usr/local/bin/python",
+            "cwd": "/home/airflow/.local/lib/python3.9/site-packages/airflow",
+            "console": "integratedTerminal",
+            "args": [
+                "dags",
+                "test",
+                "sample_etl",
+                "2022-12-28"
+            ]
+        },
+        {
+            "name": "Airflow Backfill Dag",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/airflow",
+            "python": "/usr/local/bin/python",
+            "cwd": "/home/airflow/.local/lib/python3.9/site-packages/airflow",
+            "console": "integratedTerminal",
+            "args": [
+                "dags",
+                "backfill",
+                "-s",
+                "2022-12-28",
+                "-e",
+                "2022-12-28",
+                "sample_etl"
+            ]
+        },
+        {
+            "name": "Airflow Test Task - download_files_task",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/airflow",
+            "python": "/usr/local/bin/python",
+            "cwd": "/home/airflow/.local/lib/python3.9/site-packages/airflow",
+            "args": [
+                "tasks",
+                "test",
+                "sample_etl",
+                "download_files_task",
+                "2022-12-28"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false
+        }
+    ]
+}
